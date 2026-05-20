@@ -4,13 +4,15 @@ export const siteConfig = {
   headline: "Turn chess games into viral videos.",
   description:
     "Paste a PGN and MateClip turns the biggest moments into a vertical chess recap with animations, captions, sound effects, and a tasteful watermark.",
-  supportEmail: "support@mateclip.example",
+  supportEmail: "support@mateclip.app",
   appStoreUrl: "",
   legalUpdated: "May 20, 2026",
   appleEulaUrl: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
   assets: {
     appIcon: "/assets/brand/mateclip-app-icon.png",
     ogImage: "/assets/brand/mateclip-og.png",
+    cinematicHero: "/assets/design/mateclip-cinematic-hero.png",
+    creatorWorkflow: "/assets/design/mateclip-creator-workflow.png",
     heroVideo: "/assets/videos/mateclip-hero-demo.mp4",
     heroPoster: "/assets/videos/mateclip-hero-demo-poster.jpeg",
     screenshots: {

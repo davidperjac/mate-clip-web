@@ -6,7 +6,7 @@ import { siteConfig, supportMailto } from "../site";
 export const metadata: Metadata = {
   title: "Terms",
   description:
-    "MateClip terms for App Store launch, including Apple EULA, subscriptions, credits, user content, and acceptable use.",
+    "MateClip terms, including Apple EULA, subscriptions, credits, user content, and acceptable use.",
 };
 
 export default function TermsPage() {
@@ -26,8 +26,7 @@ export default function TermsPage() {
       <h2>2. Apple Standard EULA</h2>
       <p>
         MateClip uses Apple&apos;s Standard Licensed Application End User License
-        Agreement unless a custom EULA is later provided in App Store Connect.
-        You can read Apple&apos;s Standard EULA at{" "}
+        Agreement for the iOS app. You can read Apple&apos;s Standard EULA at{" "}
         <a href={siteConfig.appleEulaUrl}>{siteConfig.appleEulaUrl}</a>.
       </p>
       <p>
@@ -75,7 +74,7 @@ export default function TermsPage() {
       <p>
         Paid features may include watermark removal, HD exports, AI voice,
         premium templates, priority queues, and generation credits. Paid iOS
-        features are expected to be purchased through Apple In-App Purchase.
+        features are purchased through Apple In-App Purchase.
       </p>
       <ul>
         <li>Subscription allowances may reset based on the billing period shown in the app.</li>

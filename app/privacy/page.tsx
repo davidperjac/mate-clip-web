@@ -6,7 +6,7 @@ import { siteConfig, supportMailto } from "../site";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "MateClip privacy policy for App Store launch, including game data, generated clips, accounts, purchases, analytics, and deletion requests.",
+    "MateClip privacy policy, including game data, generated clips, accounts, purchases, analytics, and deletion requests.",
 };
 
 export default function PrivacyPage() {
@@ -24,10 +24,9 @@ export default function PrivacyPage() {
         device/session identifiers, support messages, and basic app diagnostics.
       </p>
       <p>
-        This policy is written for the MateClip iOS app and this website. The
-        placeholder contact email is{" "}
-        <a href={supportMailto}>{siteConfig.supportEmail}</a>. Replace it before
-        submitting the app to App Store Connect.
+        This policy is written for the MateClip iOS app and this website.
+        Contact <a href={supportMailto}>{siteConfig.supportEmail}</a> for
+        privacy questions or deletion requests.
       </p>
 
       <h2>2. Information MateClip May Collect</h2>
@@ -65,14 +64,13 @@ export default function PrivacyPage() {
         MateClip may use service providers for authentication, payments,
         entitlement management, hosting, databases, object storage, analytics,
         crash reporting, AI captions, text-to-speech, and video rendering. These
-        providers are expected to protect user data under their own agreements
-        and privacy commitments.
+        providers process data under their own agreements and privacy
+        commitments.
       </p>
       <p>
-        Planned or possible providers include Apple, RevenueCat, Clerk, Render,
-        Cloudflare R2, OpenAI or another AI provider, and analytics/crash
-        reporting services. The actual App Store privacy answers should match
-        the SDKs and services integrated in the app at submission time.
+        Service providers include Apple, RevenueCat, Clerk, Render, Cloudflare
+        R2, OpenAI or another AI provider, and analytics/crash reporting
+        services, depending on the feature used.
       </p>
 
       <h2>5. User Content and Sharing</h2>

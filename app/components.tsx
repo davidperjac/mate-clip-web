@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { appStoreIsReady, siteConfig, supportMailto } from "./site";
+import { siteConfig, supportMailto } from "./site";
 
 const navLinks = [
   { href: "/#how-it-works", label: "How it works" },
-  { href: "/#screens", label: "Screens" },
+  { href: "/#inside", label: "Inside app" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/support", label: "Support" },
 ];
@@ -63,12 +63,9 @@ export function AppStoreButton({
   return (
     <a
       href={siteConfig.appStoreUrl}
-      aria-disabled={!appStoreIsReady}
-      data-empty-app-store-link={!appStoreIsReady}
       className={[
         "group inline-flex items-center justify-center rounded-[18px] border border-[#3CFF88]/35 bg-white px-5 text-[#070A0F] shadow-[0_0_30px_rgba(60,255,136,0.18)] transition hover:-translate-y-0.5 hover:border-[#5EA8FF] hover:shadow-[0_0_38px_rgba(94,168,255,0.2)]",
         compact ? "min-h-11 gap-2 py-2" : "min-h-14 gap-3 py-3",
-        !appStoreIsReady ? "cursor-pointer" : "",
         className,
       ].join(" ")}
     >
@@ -79,7 +76,14 @@ export function AppStoreButton({
           compact ? "h-7 w-7 text-sm" : "h-9 w-9 text-base",
         ].join(" ")}
       >
-        MC
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          className={compact ? "h-4 w-4" : "h-5 w-5"}
+          fill="currentColor"
+        >
+          <path d="M16.88 12.66c-.03-3.06 2.5-4.53 2.61-4.6-1.42-2.08-3.64-2.36-4.43-2.39-1.89-.19-3.69 1.11-4.65 1.11-.96 0-2.44-1.08-4.01-1.05-2.06.03-3.96 1.2-5.02 3.04-2.14 3.72-.55 9.23 1.54 12.25 1.02 1.47 2.24 3.13 3.84 3.07 1.54-.06 2.12-.99 3.98-.99 1.86 0 2.38.99 4.01.96 1.65-.03 2.7-1.5 3.71-2.98 1.17-1.71 1.65-3.36 1.68-3.45-.04-.02-3.22-1.24-3.26-4.97ZM13.83 3.69C14.67 2.67 15.24 1.25 15.08 0c-1.21.05-2.67.81-3.54 1.82-.78.9-1.46 2.35-1.28 3.73 1.35.1 2.73-.69 3.57-1.86Z" />
+        </svg>
       </span>
       <span className="text-left leading-none">
         <span className="block text-[10px] font-bold uppercase text-[#2C3448]">
@@ -116,13 +120,9 @@ export function SiteFooter() {
             MateClip turns chess games into short-form videos for creators,
             coaches, clubs, and proud chaos merchants.
           </p>
-          <p className="mt-4 text-xs text-[#6F7A91]">
-            Replace {siteConfig.supportEmail} and the empty App Store URL before
-            submitting to App Store Connect.
-          </p>
         </div>
         <div>
-          <h2 className="text-sm font-black text-white">Launch links</h2>
+          <h2 className="text-sm font-black text-white">Links</h2>
           <div className="mt-4 grid gap-3 text-sm text-[#B7C0D1]">
             <Link href="/privacy" className="hover:text-white">
               Privacy Policy
@@ -144,7 +144,7 @@ export function SiteFooter() {
             {siteConfig.supportEmail}
           </a>
           <p className="mt-3 text-sm leading-6 text-[#B7C0D1]">
-            App Store link is intentionally blank until the listing is live.
+            Send PGN, export, billing, or account questions here.
           </p>
         </div>
       </div>

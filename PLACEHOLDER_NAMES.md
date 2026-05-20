@@ -31,7 +31,7 @@ Replace files in place using the exact paths below. Once a final file uses the s
 
 Edit `app/site.ts`.
 
-- `supportEmail`: currently `support@mateclip.example`
+- `supportEmail`: currently `support@mateclip.app`
 - `appStoreUrl`: currently an empty string
 - `legalUpdated`: update whenever privacy, support, or terms content changes
 

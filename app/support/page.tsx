@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  AppStoreButton,
-  LegalPage,
-} from "../components";
+import { AppStoreButton, LegalPage } from "../components";
 import { siteConfig, supportMailto } from "../site";
 
 export const metadata: Metadata = {
@@ -23,15 +20,13 @@ export default function SupportPage() {
       <p>
         Email <a href={supportMailto}>{siteConfig.supportEmail}</a> with a short
         description of the issue, your app version, device model, and any render
-        job details you can safely share. Replace this placeholder email before
-        App Store submission.
+        job details you can safely share.
       </p>
 
       <h2>Download</h2>
       <p>
-        MateClip is being prepared for App Store launch. The App Store button is
-        visible across the site and its URL is intentionally empty until the app
-        listing is live.
+        Download MateClip on iPhone and turn a chess PGN into a shareable
+        vertical clip.
       </p>
       <p>
         <AppStoreButton />
@@ -39,15 +34,15 @@ export default function SupportPage() {
 
       <h2>PGN Help</h2>
       <p>
-        PGN is the portable game notation used by chess apps and websites. For
-        the first MateClip launch, full PGN paste is the best input because it is
-        more reliable than scraping public game pages.
+        PGN is the portable game notation used by chess apps and websites.
+        Complete PGN paste gives MateClip the cleanest game record for
+        rendering.
       </p>
       <ul>
         <li>Use a complete standard chess game, not a partial puzzle line.</li>
         <li>Copy the PGN after the game from Chess.com, Lichess, or another chess app.</li>
         <li>If validation fails, remove unsupported variant metadata and try again.</li>
-        <li>Very long games may need shorter launch templates until longer exports are supported.</li>
+        <li>For very long games, choose a shorter clip duration for the strongest pacing.</li>
       </ul>
 
       <h2>Rendering and Export Issues</h2>
@@ -60,8 +55,8 @@ export default function SupportPage() {
 
       <h2>Billing, Credits, and Subscriptions</h2>
       <p>
-        MateClip paid features are expected to use Apple In-App Purchase and
-        RevenueCat entitlement management. Users can manage or cancel App Store
+        MateClip paid features use Apple In-App Purchase and RevenueCat
+        entitlement management. Users can manage or cancel App Store
         subscriptions from their Apple account settings.
       </p>
       <ul>
